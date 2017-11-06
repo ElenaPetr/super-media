@@ -1,0 +1,26 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{modalTitle}}</h4>
+  <button type="button" class="close" aria-label="Close" 
+(click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <img src="" alt="">
+  <form [formGroup]="mediaForm">
+    <input formControlName="id" type="hidden">
+    <div class="form-group">
+      <label for="url">URL</label>
+      <input formControlName="url" type="url" class="form-control" id="url" placeholder="Enter url">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input formControlName="description" type="text" class="form-control" id="description" placeholder="Enter description">
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" 
+(click)="activeModal.close()">Close</button>
+<button (click)="submitMedia()" type="button" class="btn btn-primary">{{modalSubmit}}</button>
+</div>

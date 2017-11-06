@@ -1,0 +1,10 @@
+<div class="card text-center mb">
+    <img src="{{media.url}}" alt="{{media.description}}">
+  <div class="card-body">
+    <h4 class="card-title">{{media.description}}</h4>
+  </div>
+  <div class="card-footer text-muted">
+    <button class="btn btn-primary pull-left" (click)="open(media)">Update</button>
+    <button class="btn btn-danger pull-right" (click)="delete(media)">Delete</button>
+  </div>
+</div>
