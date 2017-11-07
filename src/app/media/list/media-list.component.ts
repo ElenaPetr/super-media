@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 import {Media} from './../media';
 import {MediaService} from '../media.service';

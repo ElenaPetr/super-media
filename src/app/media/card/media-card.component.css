@@ -1,3 +1,15 @@
 .mb {
-	margin-bottom:5%; 
+	margin-bottom:10%; 
+}
+
+.card {
+	height:360px;
+}
+
+.h-75 {
+	overflow:hidden;
+	}
+
+.card-title {
+	margin-top:.75rem;
 }
