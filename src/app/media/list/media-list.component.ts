@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 import {Media} from './../media';
 import {MediaService} from '../media.service';
@@ -34,10 +34,6 @@ export class MediaListComponent implements OnInit {
 
 	onAdd(media:Media) {
 		console.log('add media ' + media.url);
-		this.mediaList.unshift(media);
-	}
-
-	onUpdate(media:Media) {
-		console.log('update media ' + media.url);
+		 this.mediaList.unshift(media);
 	}
 }

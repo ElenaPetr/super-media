@@ -1,9 +1,9 @@
 <div class="container">
-	<add-media (onAdd)="onAdd(media)"></add-media>
+	<add-media (onAdd)="onAdd($event)"></add-media>
 	<div class="row card-group">
 		<media-card *ngFor="let media of mediaList" [media]="media"
 		class="col-12 col-md-6 col-lg-4 col-xl-3"  
-		(onDelete)="onDelete(media)" (onUpdate)="onUpdate(media)">
+		(onDelete)="onDelete(media)">
 		</media-card>
 	</div>
 </div>

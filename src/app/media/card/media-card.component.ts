@@ -17,7 +17,6 @@ export class MediaCardComponent {
 
 	@Input() media:Media;
 	@Output() onDelete = new EventEmitter<Media>();
-	@Output() onUpdate = new EventEmitter<Media>();
 	
 	delete(media:Media) {
 		console.log('child delete media' + media.id);
@@ -28,11 +27,12 @@ export class MediaCardComponent {
 
 	open(media:Media) {
 		const modalContent = this.modalService.open(ModalMediaComponent);
-		modalContent.componentInstance.media = media;
+		const modalInstance = modalContent.componentInstance;
+		modalInstance.media = media;
 		modalContent.result.then((media) => {
 			if(media) {
-				this.onUpdate.emit(media);
+				this.media = media;
 			}
-		}, (media) => {});
+		}, (media) => {});	
 	}
 }
